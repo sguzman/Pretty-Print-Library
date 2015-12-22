@@ -12,7 +12,7 @@ namespace seq {
   static constexpr const auto delimEnd = ']';
   static constexpr const auto delimSep = ',';
 
-  template <typename T, template <class...> typename Seq>
+  template <typename T, template <class> typename Seq>
   static inline ostream& operator<<(ostream& os, conref<Seq<T>> vec) noexcept {
     os << delimBegin;
     if (vec.size() > 0) {
@@ -25,6 +25,4 @@ namespace seq {
 
     return os << delimEnd;
   }
-
-    template <typename... LOL> inline ostream& operator<<(ostream&,LOL...) noexcept = delete;
 }
