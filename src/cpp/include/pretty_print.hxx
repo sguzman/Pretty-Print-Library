@@ -1,9 +1,8 @@
 #pragma once
 
 // Definitions
-#include "def.hxx"
+#include "util/def.hxx"
 
 // Print vector
-#include "vector.hxx"
+#include "seq/vector.hxx"
 
-#include "seq.hxx"
