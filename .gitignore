@@ -242,7 +242,6 @@ appengine-generated/
 *.sig
 
 pkg/
-src/
 ### Emacs template
 # -*- mode: gitignore; -*-
 \#*\#
