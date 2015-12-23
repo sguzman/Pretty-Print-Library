@@ -4,6 +4,7 @@
 #include <ostream>
 
 #include "seq-impl.hxx"
+#include "../util/def.hxx"
 
 using std::vector;
 using std::ostream;
