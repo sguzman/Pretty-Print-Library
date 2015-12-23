@@ -1,6 +1,18 @@
 cmake_minimum_required(VERSION 3.3)
 project(PrettyPrint CXX)
 
+# Set clang as compiler of choice
+IF(EXISTS /usr/bin/clang)
+    set(CMAKE_CXX_COMPILER             "/usr/bin/clang++")
+    #set(CMAKE_AR      "/usr/bin/llvm-ar")
+    #set(CMAKE_LINKER  "/usr/bin/llvm-ld")
+    #set(CMAKE_NM      "/usr/bin/llvm-nm")
+    #set(CMAKE_OBJDUMP "/usr/bin/llvm-objdump")
+    #set(CMAKE_RANLIB  "/usr/bin/llvm-ranlib")
+ELSE()
+    set(CMAKE_CXX_COMPILER             "/usr/bin/g++")
+ENDIF()
+
 # Debug Flags
 
 # Regular flags
