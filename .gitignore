@@ -298,3 +298,6 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 
+## Ignore anything lol-worthy
+*lol*
+
