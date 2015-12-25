@@ -16,5 +16,6 @@ using vecky = vector<T,std::allocator<T>>;
 // Overload print function for vector
 template <typename T>
 inline static ostream& operator<<(ostream& os, conref<vecky<T>> vec) noexcept {
-  return seq::operator<<<T, vecky>(os, vec);
+  seq::seqPrint<T,vecky>::print(os, vec);
+  return os;
 }
