@@ -12,30 +12,18 @@ namespace seq {
   static constexpr const auto delimSep = ',';
 
   template <typename T, template <class> typename Seq>
-  static inline ostream& operator<<(ostream& os, conref<Seq<T>> vec) noexcept {
-    os << delimBegin;
-    if (vec.size() > 0) {
-      os << vec.front();
+  struct seqPrint final {
+      inline static void print(ostream& os, conref<Seq<T>> seq) noexcept {
+        os << delimBegin;
+        if (seq.size() > 0) {
+          os << seq.front();
 
-      for (auto &&it = vec.cbegin() + 1; it < vec.cend(); ++it) {
-        os << delimSep << *it;
+          for (auto &&it = seq.cbegin() + 1; it < seq.cend(); ++it) {
+            os << delimSep << *it;
+          }
+        }
+
+        os << delimEnd;
       }
-    }
-
-    return os << delimEnd;
-  }
-
-  template <typename T, template <class, size_t n> typename Seq, size_t n>
-  static inline ostream& operator<<(ostream& os, conref<Seq<T,n>> vec) noexcept {
-    os << delimBegin;
-    if (vec.size() > 0) {
-      os << vec.front();
-
-      for (auto &&it = vec.cbegin() + 1; it < vec.cend(); ++it) {
-        os << delimSep << *it;
-      }
-    }
-
-    return os << delimEnd;
-  }
+  };
 }
