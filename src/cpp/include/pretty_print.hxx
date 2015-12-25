@@ -3,6 +3,6 @@
 // Definitions
 #include "util/def.hxx"
 
-// Print vector
+// Print sequence containers
 #include "seq/seq.hxx"
 
