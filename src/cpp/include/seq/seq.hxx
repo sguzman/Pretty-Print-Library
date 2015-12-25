@@ -10,4 +10,3 @@
 
 template <typename T, template <class> typename B>
 static inline ostream& operator<<(ostream&,conref<B<T>>) noexcept = delete;
-
