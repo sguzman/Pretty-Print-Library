@@ -13,10 +13,12 @@ int main(void) {
   std::set<int> set{1, 2, 3, 4, 5, 7, 8};
   std::multiset<int> mset{1, 2, 3, 4, 5, 7, 8};
   std::map<int,int> map{make_pair(1, 8), make_pair(2, 7), make_pair(3, 6), make_pair(4, 5), make_pair(5, 4), make_pair(6, 3), make_pair(7, 2), make_pair(8, 1)};
+  std::multimap<int,int> mmap{make_pair(1, 8), make_pair(2, 7), make_pair(3, 6), make_pair(4, 5), make_pair(5, 4), make_pair(6, 3), make_pair(7, 2), make_pair(8, 1)};
 
   cout << "Set: " << set << endl;
   cout << "Multiset: " << mset << endl;
   cout << "Map: " << map << endl;
+  cout << "Multimap: " << mmap << endl;
 
   return EXIT_SUCCESS;
 }

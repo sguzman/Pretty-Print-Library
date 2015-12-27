@@ -10,3 +10,5 @@
 #include "single/map/map.hxx"
 // Impl for multiset
 #include "multi/set/multiset.hxx"
+// Impl for multimap
+#include "multi/map/multimap.hxx"
