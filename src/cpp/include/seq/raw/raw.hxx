@@ -1,10 +1,15 @@
 #pragma once
 
 #include <type_traits>
+#include <ostream>
 
-template <typename T, unsigned int N>
-typename std::enable_if<!std::is_same<T, char>::value, std::ostream &>::type
-operator<<(std::ostream & os, const T (&arr)[N]) {
+using std::ostream;
+using std::enable_if;
+using std::is_same;
+
+template <typename T, size_t N>
+typename enable_if<!is_same<T, char>::value, ostream &>::type
+operator<<(ostream & os, const T (&arr)[N]) {
   os << seq::delimBegin;
 
   if (N > 0) {
