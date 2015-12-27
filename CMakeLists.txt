@@ -33,22 +33,24 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall")
 # Debug flags
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -g -O -Weverything -Werror -pedantic -pedantic-errors -Wno-c++98-compat")
 
+file(GLOB UTIL_HEADER src/cpp/include/util/*.hxx)
+
 ## Sequence stuff
 # Sequence source
 set(SEQ_SOURCE src/cpp/src/seq/seq.cxx)
 
 # Get all headers for seq
-set(SEQ_HEADER src/cpp/include/seq/impl/seq-impl.hxx src/cpp/include/seq/seq.hxx src/cpp/include/seq/array/array.hxx src/cpp/include/seq/vector/vector.hxx src/cpp/include/seq/deque/deque.hxx src/cpp/include/seq/raw/raw.hxx src/cpp/include/seq/forward_list/forward.hxx src/cpp/include/seq/list/list.hxx)
+file(GLOB_RECURSE SEQ_HEADER src/cpp/include/seq/*.hxx)
 
 # Debug build for sequences
-add_executable(SeqPrettyPrintDebug ${SEQ_SOURCE} ${SEQ_HEADER})
+add_executable(SeqPrettyPrintDebug ${SEQ_SOURCE} ${UTIL_HEADER} ${SEQ_HEADER})
 
 ## Associate stuff
 # Associate source
 set(ASS_SOURCE src/cpp/src/ass/ass.cxx)
 
 # Get all headers for ass
-set(ASS_HEADER src/cpp/include/ass/ass.hxx src/cpp/include/ass/single/set/set.hxx src/cpp/include/seq/impl/seq-impl.hxx src/cpp/include/ass/single/map/map.hxx)
+file(GLOB_RECURSE ASS_HEADER src/cpp/include/ass/*.hxx)
 
 # Debug build for associatives
-add_executable(AssPrettyPrintDebug ${ASS_SOURCE} ${ASS_HEADER})
+add_executable(AssPrettyPrintDebug ${ASS_SOURCE} ${UTIL_HEADER} ${ASS_HEADER})
