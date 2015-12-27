@@ -3,6 +3,8 @@
 #include <deque>
 #include <ostream>
 
+#include "../../util/def.hxx"
+
 using std::deque;
 using std::ostream;
 
