@@ -36,5 +36,17 @@ collection of key-value pairs, sorted by keys
 #### [multiset](http://en.cppreference.com/w/cpp/container/multiset)
 collection of keys, sorted by keys
 
+### Unordered associative containers
+Unordered associative containers implement unsorted (hashed) data structures that can be quickly searched (`O(1)` amortized, `O(n)` worst-case complexity).
+
+#### [unordered_set](http://en.cppreference.com/w/cpp/container/unordered_set)
+collection of unique keys, sorted by keys
+#### [unordered_map](http://en.cppreference.com/w/cpp/container/unordered_map)
+collection of key-value pairs, sorted by keys, keys are unique
+#### [unordered_multimap](http://en.cppreference.com/w/cpp/container/unordered_multimap)
+collection of key-value pairs, sorted by keys
+#### [unordered_multiset](http://en.cppreference.com/w/cpp/container/unordered_multiset)
+collection of keys, sorted by keys
+
 ### References
 [Containers](http://en.cppreference.com/w/cpp/container)
