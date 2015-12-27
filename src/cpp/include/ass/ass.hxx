@@ -6,3 +6,5 @@
 
 // Impl for set
 #include "single/set/set.hxx"
+// Impl for map
+#include "single/map/map.hxx"

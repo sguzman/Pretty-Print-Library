@@ -3,6 +3,7 @@
 #include <ostream>
 
 #include "../../util/def.hxx"
+#include "../../util/pair.hxx"
 
 using std::ostream;
 using std::distance;

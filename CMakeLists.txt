@@ -37,7 +37,7 @@ add_executable(SeqPrettyPrintDebug ${SEQ_SOURCE} ${SEQ_HEADER})
 set(ASS_SOURCE src/cpp/src/ass/ass.cxx)
 
 # Get all headers for ass
-set(ASS_HEADER src/cpp/include/ass/ass.hxx)
+set(ASS_HEADER src/cpp/include/ass/ass.hxx src/cpp/include/ass/single/set/set.hxx src/cpp/include/seq/impl/seq-impl.hxx src/cpp/include/ass/single/map/map.hxx)
 
 # Debug build for associatives
 add_executable(AssPrettyPrintDebug ${ASS_SOURCE} ${ASS_HEADER})
