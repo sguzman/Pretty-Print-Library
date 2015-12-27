@@ -48,5 +48,15 @@ collection of key-value pairs, sorted by keys
 #### [unordered_multiset](http://en.cppreference.com/w/cpp/container/unordered_multiset)
 collection of keys, sorted by keys
 
+### Container adaptors
+Container adaptors provide a different interface for sequential containers.
+
+#### [stack](http://en.cppreference.com/w/cpp/container/stack)
+adapts a container to provide stack (LIFO data structure)
+#### [queue](http://en.cppreference.com/w/cpp/container/queue)
+adapts a container to provide queue (FIFO data structure)
+#### [priority_queue](http://en.cppreference.com/w/cpp/container/priority_queue)
+adapts a container to provide priority queue
+
 ### References
 [Containers](http://en.cppreference.com/w/cpp/container)
