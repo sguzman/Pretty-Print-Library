@@ -53,4 +53,4 @@ set(ASS_SOURCE src/cpp/src/ass/ass.cxx)
 file(GLOB_RECURSE ASS_HEADER src/cpp/include/ass/*.hxx)
 
 # Debug build for associatives
-add_executable(AssPrettyPrintDebug ${ASS_SOURCE} ${UTIL_HEADER} ${ASS_HEADER})
+add_executable(AssPrettyPrintDebug ${ASS_SOURCE} ${UTIL_HEADER} ${ASS_HEADER} src/cpp/include/seq/impl/seq-impl.hxx)
