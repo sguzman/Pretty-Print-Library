@@ -16,11 +16,9 @@ int main() {
 
   vector<int> vec{1, 2, 3, 4, 5, 6, 7, 8};
   array<int, 8> arr{{1, 2, 3, 4, 5, 6, 7, 8}};
-  int raw[3]{1, 2, 3};
 
   cout << "Vector: " << vec << endl;
   cout << "Array: " << arr << endl;
-  cout << "Raw: " << raw << endl;
 
   return EXIT_SUCCESS;
 }

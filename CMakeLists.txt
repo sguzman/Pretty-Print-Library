@@ -25,7 +25,7 @@ set(CMAKE_CXX_FLAGS "${MAIN_FLAGS}")
 set(SEQ_SOURCE src/cpp/src/seq/seq.cpp)
 
 # Get all headers for seq
-set(SEQ_HEADER src/cpp/include/seq/impl/seq-impl.hxx src/cpp/include/seq/seq.hxx src/cpp/include/seq/array/array.hxx src/cpp/include/seq/vector/vector.hxx src/cpp/include/seq/raw/raw.hxx)
+set(SEQ_HEADER src/cpp/include/seq/impl/seq-impl.hxx src/cpp/include/seq/seq.hxx src/cpp/include/seq/array/array.hxx src/cpp/include/seq/vector/vector.hxx)
 
 # Regular build for sequences
 add_executable(SeqPrettyPrint ${SEQ_SOURCE} src/cpp/include/pretty_print.hxx ${SEQ_HEADER})
