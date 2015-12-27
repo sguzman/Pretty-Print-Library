@@ -6,7 +6,7 @@
 #include <list>
 #include <vector>
 
-#include "../../include/pretty_print.hxx"
+#include "../../include/seq/seq.hxx"
 
 using std::array;
 using std::cout;
