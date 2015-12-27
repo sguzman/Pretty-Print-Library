@@ -19,7 +19,7 @@ int main(void) noexcept {
   array<int, 8> arr{{1, 2, 3, 4, 5, 6, 7, 8}};
   deque<int> deq{1, 2, 3, 4, 5, 6, 7, 8};
   vector<int> vec{1, 2, 3, 4, 5, 6, 7, 8};
-  int raw[3]{1, 2, 3};
+  int raw[8]{1, 2, 3, 4, 5, 6, 7, 8};
 
   cout << "Vector: " << vec << endl;
   cout << "Array: " << arr << endl;
