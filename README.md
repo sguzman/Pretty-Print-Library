@@ -60,3 +60,4 @@ adapts a container to provide priority queue
 
 ### References
 [Containers](http://en.cppreference.com/w/cpp/container)
+[Inspiration](https://github.com/louisdx/cxx-prettyprint)
