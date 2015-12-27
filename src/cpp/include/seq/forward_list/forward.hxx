@@ -6,22 +6,17 @@
 #include "../../util/def.hxx"
 #include "../impl/seq-impl.hxx"
 
+using std::allocator;
 using std::distance;
 using std::forward_list;
 using std::ostream;
 
 template <typename T>
-inline static ostream& operator<<(ostream& os, forward_list<T>& forw) noexcept {
-  os << seq::delimBegin;
+using flist = forward_list<T, allocator<T>>;
 
-  if (distance(forw.begin(), forw.end()) > 0) {
-    os << forw.front();
+template <typename T>
+inline static ostream& operator<<(ostream& os, conref<flist<T>> forw) noexcept {
+  seq::seqPrint<T, flist>::print(os, forw);
 
-    auto&& it = forw.cbegin();
-    for (++it; it != forw.cend(); ++it) {
-      os << seq::delimSep << *it;
-    }
-  }
-
-  return os << seq::delimEnd;
+  return os;
 }

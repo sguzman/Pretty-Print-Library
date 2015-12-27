@@ -5,20 +5,18 @@
 #include "../../util/def.hxx"
 
 using std::ostream;
+using std::distance;
 
 namespace seq {
-  static constexpr const auto delimBegin = '[';
-  static constexpr const auto delimEnd = ']';
-  static constexpr const auto delimSep = ',';
-
-  template <typename T, template <class> typename Seq>
+  template <typename T, template <class> typename Seq, unsigned char delimBegin = '[', unsigned char delimEnd = ']', unsigned char delimSep = ','>
   struct seqPrint final {
       inline static void print(ostream& os, conref<Seq<T>> seq) noexcept {
         os << delimBegin;
-        if (seq.size() > 0) {
-          os << seq.front();
+        if (distance(seq.cbegin(), seq.cend()) > 0) {
+          auto &&it = seq.cbegin();
+          os << *it;
 
-          for (auto &&it = seq.cbegin() + 1; it < seq.cend(); ++it) {
+          for (++it; it != seq.cend(); ++it) {
             os << delimSep << *it;
           }
         }
