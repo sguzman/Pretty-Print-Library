@@ -14,6 +14,8 @@
 #include "../seq/deque/deque.hxx"
 // Impl for forward_list
 #include "../seq/forward_list/forward.hxx"
+// Impl for list
+#include "../seq/list/list.hxx"
 // Impl for raw C array
 #include "../seq/raw/raw.hxx"
 // Impl for vector
