@@ -13,6 +13,17 @@ ELSE()
     set(CMAKE_CXX_COMPILER             "/usr/bin/g++")
 ENDIF()
 
+# Clean cmake files
+add_custom_target(
+        cclean
+        COMMAND rm CMakeCache.txt
+        COMMAND rm -r CMakeFiles
+        COMMAND rm cmake_install.cmake
+        COMMAND rm Makefile
+        COMMENT "Clean up cmake specific files"
+        VERBATIM
+)
+
 # Regular flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
 
