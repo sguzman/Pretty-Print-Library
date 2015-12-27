@@ -2,7 +2,10 @@
 
 A C++ library for printing standard library data structures
 
-## Containers Printed
+## Purpose
+The purpose of this library is to add print support to C++ STD containers. With the support of this library, you can now print containers like you can any other data type.
+
+## Containers Supported
 These are the containers that this library supports
 
 ### Sequence Containers
