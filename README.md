@@ -9,14 +9,14 @@ These are the containers that this library supports
 Sequence containers implement data structures which can be accessed sequentially
 
 #### array (C++11)
-* static contiguous array
+static contiguous array
 #### deque
-* double-ended queue
+double-ended queue
 #### forward_list (C++11)
-* singly-linked list
+singly-linked list
 #### list
-* doubly-linked list
+doubly-linked list
 #### raw
-* C style array
+C style array
 #### vector
-* dynamic contiguous array
+dynamic contiguous array
