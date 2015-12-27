@@ -9,7 +9,7 @@ using std::is_same;
 
 template <typename T, size_t N>
 typename enable_if<!is_same<T, char>::value, ostream &>::type
-operator<<(ostream & os, const T (&arr)[N]) {
+operator<<(ostream & os, const T (&arr)[N]) noexcept {
   os << seq::delimBegin;
 
   if (N > 0) {
