@@ -6,3 +6,5 @@
 // Print sequence containers
 #include "seq/seq.hxx"
 
+// Print associate containers
+#include "ass/ass.hxx"
