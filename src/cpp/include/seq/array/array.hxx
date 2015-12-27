@@ -3,7 +3,7 @@
 #include <array>
 #include <ostream>
 
-#include "seq-impl.hxx"
+#include "../impl/seq-impl.hxx"
 
 using std::array;
 using std::ostream;

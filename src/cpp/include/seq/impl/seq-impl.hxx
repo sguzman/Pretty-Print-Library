@@ -2,7 +2,7 @@
 
 #include <ostream>
 
-#include "../util/def.hxx"
+#include "../../util/def.hxx"
 
 using std::ostream;
 

@@ -3,8 +3,8 @@
 #include <vector>
 #include <ostream>
 
-#include "seq-impl.hxx"
-#include "../util/def.hxx"
+#include "../impl/seq-impl.hxx"
+#include "../../util/def.hxx"
 
 using std::vector;
 using std::ostream;
