@@ -2,11 +2,17 @@
 
 #include <array>
 
+// Some util definitions
 #include "../util/def.hxx"
 
+// Main implementation of sequence printing
 #include "../seq/impl/seq-impl.hxx"
+
+// Impl for vector
 #include "../seq/vector/vector.hxx"
+// Impl for array
 #include "../seq/array/array.hxx"
+// Impl for raw C array
 #include "../seq/raw/raw.hxx"
 
 template <typename T, template <class> typename B>
