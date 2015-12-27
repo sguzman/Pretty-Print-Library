@@ -24,5 +24,17 @@ C style array
 #### [vector](http://en.cppreference.com/w/cpp/container/vector)
 dynamic contiguous array
 
+### Associative containers
+Associative containers implement sorted data structures that can be quickly searched (O(log n) complexity)
+
+#### [set](http://en.cppreference.com/w/cpp/container/set)
+collection of unique keys, sorted by keys
+#### [map](http://en.cppreference.com/w/cpp/container/map)
+collection of key-value pairs, sorted by keys, keys are unique
+#### [multimap](http://en.cppreference.com/w/cpp/container/multimap)
+collection of key-value pairs, sorted by keys
+#### [multiset](http://en.cppreference.com/w/cpp/container/multiset)
+collection of keys, sorted by keys
+
 ### References
 [Containers](http://en.cppreference.com/w/cpp/container)
