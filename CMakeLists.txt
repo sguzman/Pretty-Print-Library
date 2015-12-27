@@ -13,12 +13,14 @@ ELSE()
     set(CMAKE_CXX_COMPILER             "/usr/bin/g++")
 ENDIF()
 
-# Debug Flags
-
 # Regular flags
-set(MAIN_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
-set(DEBUG_FLAGS "${MAIN_FLAGS} -g -O -Weverything -Werror -pedantic -pedantic-errors -Wno-c++98-compat")
-set(CMAKE_CXX_FLAGS "${MAIN_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
+
+# Release flags
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall")
+
+# Debug flags
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -g -O -Weverything -Werror -pedantic -pedantic-errors -Wno-c++98-compat")
 
 ## Sequence stuff
 # Sequence source
@@ -27,9 +29,5 @@ set(SEQ_SOURCE src/cpp/src/seq/seq.cpp)
 # Get all headers for seq
 set(SEQ_HEADER src/cpp/include/seq/impl/seq-impl.hxx src/cpp/include/seq/seq.hxx src/cpp/include/seq/array/array.hxx src/cpp/include/seq/vector/vector.hxx src/cpp/include/seq/deque/deque.hxx src/cpp/include/seq/raw/raw.hxx src/cpp/include/seq/forward_list/forward.hxx src/cpp/include/seq/list/list.hxx)
 
-# Regular build for sequences
-add_executable(SeqPrettyPrint ${SEQ_SOURCE} src/cpp/include/pretty_print.hxx ${SEQ_HEADER})
-
 # Debug build for sequences
-set(CMAKE_CXX_FLAGS "${DEBUG_FLAGS}")
 add_executable(SeqPrettyPrintDebug ${SEQ_SOURCE} ${SEQ_HEADER})
