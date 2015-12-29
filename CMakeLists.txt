@@ -57,7 +57,7 @@ add_executable(AssPrettyPrintDebug ${ASS_SOURCE} ${UTIL_HEADER} ${ASS_HEADER} sr
 
 ## Unordered Associative stuff
 # Unordered Associative stuff
-set(UNO_SOURCE src/cpp/src/uno/)
+set(UNO_SOURCE src/cpp/src/uno/uno.cxx)
 
 # Get all headers for uno
 file(GLOB_RECURSE UNO_HEADER src/cpp/include/uno/*.hxx)
