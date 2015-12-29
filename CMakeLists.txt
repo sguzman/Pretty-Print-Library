@@ -45,8 +45,8 @@ file(GLOB_RECURSE SEQ_HEADER src/cpp/include/seq/*.hxx)
 # Debug build for sequences
 add_executable(SeqPrettyPrintDebug ${SEQ_SOURCE} ${UTIL_HEADER} ${SEQ_HEADER})
 
-## Associate stuff
-# Associate source
+## Associative stuff
+# Associative source
 set(ASS_SOURCE src/cpp/src/ass/ass.cxx)
 
 # Get all headers for ass
@@ -54,3 +54,13 @@ file(GLOB_RECURSE ASS_HEADER src/cpp/include/ass/*.hxx)
 
 # Debug build for associatives
 add_executable(AssPrettyPrintDebug ${ASS_SOURCE} ${UTIL_HEADER} ${ASS_HEADER} src/cpp/include/seq/impl/seq-impl.hxx)
+
+## Unordered Associative stuff
+# Unordered Associative stuff
+set(UNO_SOURCE src/cpp/src/uno/)
+
+# Get all headers for uno
+file(GLOB_RECURSE UNO_HEADER src/cpp/include/uno/*.hxx)
+
+# Debug build for unordered
+add_executable(UnoPrettyPrintDebug ${UNO_SOURCE} ${UTIL_HEADER} ${UNO_HEADER} src/cpp/include/seq/impl/seq-impl.hxx)
